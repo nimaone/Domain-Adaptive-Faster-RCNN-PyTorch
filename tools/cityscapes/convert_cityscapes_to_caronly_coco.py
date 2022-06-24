@@ -27,7 +27,9 @@ import os
 import scipy.misc
 import sys
 
-import cityscapesscripts.evaluation.instances2dict_with_polygons as cs
+# import cityscapesscripts.evaluation.instances2dict_with_polygons as cs
+import tools.cityscapes.instances2dict_with_polygons as cs
+
 import numpy as np
 
 def parse_args():
@@ -93,9 +95,9 @@ def convert_cityscapes_car_only(
         # 'gtCoarse_train_extra'
     ]
     ann_dirs = [
-        'gtFine_trainvaltest/gtFine/val',
-        'gtFine_trainvaltest/gtFine/train',
-        # 'gtFine_trainvaltest/gtFine/test',
+        'gtFine/val',
+        'gtFine/train',
+        # 'gtFine/test',
 
         # 'gtCoarse/train',
         # 'gtCoarse/train_extra',
